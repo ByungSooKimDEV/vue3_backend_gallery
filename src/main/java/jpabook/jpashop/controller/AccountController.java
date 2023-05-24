@@ -1,5 +1,6 @@
 package jpabook.jpashop.controller;
 
+import io.jsonwebtoken.Claims;
 import jpabook.jpashop.domain.item.Item;
 import jpabook.jpashop.domain.item.Member;
 import jpabook.jpashop.repository.ItemRepository;
@@ -9,10 +10,7 @@ import jpabook.jpashop.service.JwtServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.Cookie;
@@ -26,6 +24,7 @@ import java.util.Map;
 public class AccountController {
 
     private final MemberRepository memberRepository;
+    private final JwtService jwtService;
 
     @PostMapping("/api/account/login")
     public ResponseEntity login(@RequestBody Map<String, String> params,
@@ -52,6 +51,17 @@ public class AccountController {
         }
 
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/api/account/check")
+    public ResponseEntity check(@CookieValue(value = "token", required = false) String token) throws IOException {
+        Claims claims = jwtService.getClaims(token);
+
+        if(claims != null) {
+            int id = Integer.parseInt(claims.get("id").toString());
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
 }
