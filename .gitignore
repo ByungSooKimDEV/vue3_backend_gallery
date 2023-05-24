@@ -38,4 +38,4 @@ out/
 
 
 ###
-!**/main/resources/jwt-secret.key
+**/main/resources/jwt-secret.key
