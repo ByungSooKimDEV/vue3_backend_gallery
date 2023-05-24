@@ -20,3 +20,8 @@ spring:
 logging.level:
   org.hibernate.SQL: debug
 # org.hibernate.type: trace
+
+jwt:
+  secret:
+    key:
+      file: /path/to/jwt-secret.key
