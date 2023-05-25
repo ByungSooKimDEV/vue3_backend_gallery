@@ -1,9 +1,7 @@
-package jpabook.jpashop.service;
+package gallery.backend.service;
 
 import io.jsonwebtoken.*;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 

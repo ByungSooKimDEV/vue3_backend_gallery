@@ -1,6 +1,6 @@
-package jpabook.jpashop.repository;
+package gallery.backend.repository;
 
-import jpabook.jpashop.domain.item.Member;
+import gallery.backend.domain.item.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MemberRepository extends JpaRepository<Member, Integer> {

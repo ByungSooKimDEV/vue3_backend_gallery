@@ -1,4 +1,4 @@
-package jpabook.jpashop.service;
+package gallery.backend.service;
 
 import io.jsonwebtoken.Claims;
 

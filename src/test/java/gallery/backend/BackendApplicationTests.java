@@ -1,10 +1,10 @@
-package jpabook.jpashop;
+package gallery.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JpashopApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {

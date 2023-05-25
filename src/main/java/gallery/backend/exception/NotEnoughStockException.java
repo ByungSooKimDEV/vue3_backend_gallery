@@ -1,4 +1,4 @@
-package jpabook.jpashop.exception;
+package gallery.backend.exception;
 
 /**
  * 18강 상품 엔티티 개발(비즈니스 로직 추가) 5분 확인

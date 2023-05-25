@@ -1,7 +1,7 @@
-package jpabook.jpashop.controller;
+package gallery.backend.controller;
 
-import jpabook.jpashop.domain.item.Item;
-import jpabook.jpashop.repository.ItemRepository;
+import gallery.backend.domain.item.Item;
+import gallery.backend.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

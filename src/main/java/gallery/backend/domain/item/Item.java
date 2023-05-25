@@ -1,4 +1,4 @@
-package jpabook.jpashop.domain.item;
+package gallery.backend.domain.item;
 
 import lombok.Getter;
 

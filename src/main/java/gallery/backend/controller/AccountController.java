@@ -1,12 +1,10 @@
-package jpabook.jpashop.controller;
+package gallery.backend.controller;
 
 import io.jsonwebtoken.Claims;
-import jpabook.jpashop.domain.item.Item;
-import jpabook.jpashop.domain.item.Member;
-import jpabook.jpashop.repository.ItemRepository;
-import jpabook.jpashop.repository.MemberRepository;
-import jpabook.jpashop.service.JwtService;
-import jpabook.jpashop.service.JwtServiceImpl;
+import gallery.backend.domain.item.Member;
+import gallery.backend.repository.MemberRepository;
+import gallery.backend.service.JwtService;
+import gallery.backend.service.JwtServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +14,6 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 @RestController
