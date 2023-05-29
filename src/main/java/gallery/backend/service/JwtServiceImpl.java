@@ -74,4 +74,22 @@ public class JwtServiceImpl implements JwtService{
         ClassPathResource resource = new ClassPathResource(SECRET_KEY_FILE);
         return StreamUtils.copyToString(resource.getInputStream(), StandardCharsets.UTF_8);
     }
+
+    @Override
+    public boolean isValid(String token) throws IOException {
+
+        return this.getClaims(token) != null;
+    }
+
+    @Override
+    public int getId(String token) throws IOException {
+        Claims claims = this.getClaims(token);
+
+        if (claims != null) {
+            return Integer.parseInt(claims.get("id").toString());
+        }
+
+        return 0;
+    }
+
 }
