@@ -1,4 +1,4 @@
-package gallery.backend.domain;
+package gallery.backend.entity;
 
 import lombok.Getter;
 import lombok.Setter;

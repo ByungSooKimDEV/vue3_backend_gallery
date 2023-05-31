@@ -1,6 +1,6 @@
 package gallery.backend.controller;
 
-import gallery.backend.domain.Item;
+import gallery.backend.entity.Item;
 import gallery.backend.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

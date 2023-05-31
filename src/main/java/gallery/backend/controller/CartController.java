@@ -1,7 +1,7 @@
 package gallery.backend.controller;
 
-import gallery.backend.domain.Cart;
-import gallery.backend.domain.Item;
+import gallery.backend.entity.Cart;
+import gallery.backend.entity.Item;
 import gallery.backend.repository.CartRepository;
 import gallery.backend.repository.ItemRepository;
 import gallery.backend.service.JwtService;

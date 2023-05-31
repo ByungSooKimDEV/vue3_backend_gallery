@@ -1,7 +1,7 @@
 package gallery.backend.controller;
 
 import io.jsonwebtoken.Claims;
-import gallery.backend.domain.Member;
+import gallery.backend.entity.Member;
 import gallery.backend.repository.MemberRepository;
 import gallery.backend.service.JwtService;
 import gallery.backend.service.JwtServiceImpl;

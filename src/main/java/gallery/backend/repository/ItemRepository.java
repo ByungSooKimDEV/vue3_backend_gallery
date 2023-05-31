@@ -1,6 +1,6 @@
 package gallery.backend.repository;
 
-import gallery.backend.domain.Item;
+import gallery.backend.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
